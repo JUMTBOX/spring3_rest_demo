@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -18,4 +19,8 @@ public class ProductController {
     }
     
     // 상품 등록
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public void saveProduct () {
+        productService.saveProduct();
+    }
 }
