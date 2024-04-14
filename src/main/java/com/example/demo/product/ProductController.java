@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class ProductController {
     @Autowired
-    ProductService productService = new ProductService();
+    ProductService productService;
     //상품 조회
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String findProducts () {

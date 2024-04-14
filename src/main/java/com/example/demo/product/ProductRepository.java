@@ -11,6 +11,6 @@ public class ProductRepository {
     private int id = 1;
 
     public String findProduct () {
-        return "Notebook";
+        return "Notebook 오토와이어드 변경";
     }
 }

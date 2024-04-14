@@ -5,8 +5,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductService {
+
+    ProductRepository productRepository;
     @Autowired
-    ProductRepository productRepository = new ProductRepository();
+    ProductService(ProductRepository productRepository){
+        this.productRepository = productRepository;
+    }
     public String findProduct() {
         return productRepository.findProduct();
     }
