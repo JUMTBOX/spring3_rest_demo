@@ -7,14 +7,15 @@ import java.util.Map;
 
 @Repository
 public class ProductRepository {
-    private final Map<Integer, String> db = new HashMap<>();
+    private final Map<Integer, ProductVO> db = new HashMap<>();
     private int id = 1;
 
-    public String findProduct () {
-        return db.get(1);
+    public ProductVO findProduct (int productId) {
+        return db.get(productId);
     }
 
-    public void save() {
-        db.put(id++, "notebook" + id);
+    public void save(ProductVO productVO) {
+          System.out.println(productVO.getName());
+          db.put(id++, productVO);
     }
 }
